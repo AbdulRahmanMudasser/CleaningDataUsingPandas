@@ -3,10 +3,17 @@ import pandas as pd
 # reading csv file
 df = pd.read_csv('venv/resource/DataSet.csv')
 
+# read a specific location
+print(df.iloc[2, 3])
+
+# read each row
+# print(df.iloc[1])
+# print(df.iloc[1:4])
+
 # read each column
-print(df['Calories'])
-print(df['Calories'][0:5])
-print(df[['Calories', 'Duration']])
+# print(df['Calories'])
+# print(df['Calories'][0:5])
+# print(df[['Calories', 'Duration']])
 
 # # read headers
 # print(df.columns)
