@@ -1,21 +1,33 @@
-from nltk.tokenize import word_tokenize
-from nltk.probability import FreqDist
+from matplotlib import pyplot as plt
 
-fDist = FreqDist()
+df = [23, 43, 21, 56, 78, 54, 88, 99, 100, 181, 19, 4, 1, 2, 3, 4, 56, 73, 29, 30, 20, 55, 41]
 
-AI = """Natural Language Processing (NLP) is a branch of Data Science which deals with Text data. Apart from 
-numerical data, Text data is available to a great extent which is used to analyze and solve business problems. But 
-before using the data for analysis or prediction, processing the data is important. What is NLP for text 
-classification? Text classification also known as text tagging or text categorization is the process of categorizing 
-text into organized groups. By using Natural Language Processing (NLP), text classifiers can automatically analyze 
-text and then assign a set of pre-defined tags or categories based on its content."""
+plt.hist(df)
 
-AI_tokens = word_tokenize(AI)
+plt.show()
 
-for word in AI_tokens:
-    fDist[word.lower()] += 1
+# from nltk.stem import PorterStemmer
+#
+# poster_stemmer = PorterStemmer()
 
-print(fDist)
+# from nltk.tokenize import word_tokenize
+# from nltk.probability import FreqDist
+#
+# fDist = FreqDist()
+#
+# AI = """Natural Language Processing (NLP) is a branch of Data Science which deals with Text data. Apart from
+# numerical data, Text data is available to a great extent which is used to analyze and solve business problems. But
+# before using the data for analysis or prediction, processing the data is important. What is NLP for text
+# classification? Text classification also known as text tagging or text categorization is the process of categorizing
+# text into organized groups. By using Natural Language Processing (NLP), text classifiers can automatically analyze
+# text and then assign a set of pre-defined tags or categories based on its content."""
+#
+# AI_tokens = word_tokenize(AI)
+#
+# for word in AI_tokens:
+#     fDist[word.lower()] += 1
+#
+# print(fDist)
 
 # from nltk.corpus import gutenberg
 #
